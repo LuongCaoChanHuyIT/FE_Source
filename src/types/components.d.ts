@@ -11,6 +11,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseButton: typeof import('./../components/UI/Buttons/BaseButton.vue')['default']
+    BaseCheckbox: typeof import('./../components/UI/Buttons/BaseCheckbox.vue')['default']
+    BaseInput: typeof import('./../components/UI/Inputs/BaseInput.vue')['default']
+    BaseRadio: typeof import('./../components/UI/Buttons/BaseRadio.vue')['default']
+    BaseSelect: typeof import('./../components/UI/Inputs/BaseSelect.vue')['default']
+    Footer: typeof import('./../components/Elements/Footer.vue')['default']
+    Header: typeof import('./../components/Elements/Header.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

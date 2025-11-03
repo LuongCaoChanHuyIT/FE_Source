@@ -1,15 +1,16 @@
-<template>
-  <div>
-    <header class="bg-white shadow p-4 flex justify-between">
-      <h1 class="font-bold text-lg">MyShop</h1>
-      <nav>
-        <router-link to="/" class="px-3 text-blue-600">Home</router-link>
-        <router-link to="/about" class="px-3 text-blue-600">About</router-link>
-      </nav>
-    </header>
+<script setup lang="ts">
+import Header from '@/components/Elements/Header.vue'
+import Footer from '@/components/Elements/Footer.vue'
+</script>
 
-    <main class="p-6">
-      <router-view></router-view>
+<template>
+  <div class="min-h-screen flex flex-col bg-gray-50">
+    <Header />
+    <main class="grow w-full">
+      <div class="max-w-7xl mx-auto">
+        <router-view />
+      </div>
     </main>
+    <Footer />
   </div>
 </template>
