@@ -1,9 +1,9 @@
 @import 'tailwindcss';
-@import 'fortawesome/fontawesome-free/css/all.css';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
 body {
   margin: 0;
 }
