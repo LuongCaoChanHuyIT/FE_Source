@@ -1,18 +1,20 @@
 <template>
   <div class="flex flex-col space-y-1">
-    <label v-if="label" :for="id" class="text-sm font-medium text-gray-700">
+    <label v-if="label" :for="id" class="text-sm font-medium">
       {{ label }}
-      <span v-if="required" class="text-red-500">*</span>
+      <span v-if="required" class="text-(--color-red)">*</span>
     </label>
 
     <div
       class="relative flex items-center"
       :class="[
-        error ? 'border-red-500' : 'border-gray-300 focus-within:border-blue-500',
+        error
+          ? 'border-(--color-red)'
+          : 'border-(--color-very-light-muted-blue) focus-within:border-(--color-vibrant-orange)',
         'border rounded-lg transition duration-150',
       ]"
     >
-      <span v-if="$slots.prefix" class="pl-3 text-gray-500">
+      <span v-if="$slots.prefix" class="pl-3 opacity-75">
         <slot name="prefix" />
       </span>
 
@@ -20,17 +22,17 @@
         :is="isTextarea ? 'textarea' : 'input'"
         :value="modelValue"
         v-bind="inputAttrs"
-        class="w-full px-3 py-2 text-sm text-gray-900 placeholder-gray-400 bg-transparent focus:outline-none"
+        class="w-full px-3 py-2 text-sm text-gray-900 placeholder-(--color-very-light-muted-blue) bg-transparent focus:outline-none"
         :rows="isTextarea ? rows : undefined"
         @input="onInput"
       />
 
-      <span v-if="$slots.suffix" class="pr-3 text-gray-500">
+      <span v-if="$slots.suffix" class="pr-3 opacity-75">
         <slot name="suffix" />
       </span>
     </div>
 
-    <p v-if="error" class="text-sm text-red-500">
+    <p v-if="error" class="text-sm text-(--color-red)">
       {{ error }}
     </p>
   </div>
