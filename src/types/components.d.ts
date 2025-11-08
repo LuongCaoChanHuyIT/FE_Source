@@ -17,6 +17,8 @@ declare module 'vue' {
     BaseRadio: typeof import('./../components/UI/Buttons/BaseRadio.vue')['default']
     BaseSelect: typeof import('./../components/UI/Inputs/BaseSelect.vue')['default']
     Footer: typeof import('./../components/Elements/Footer.vue')['default']
+    FormSignIn: typeof import('./../components/Elements/AuthComponents/FormSignIn.vue')['default']
+    FormSignUp: typeof import('./../components/Elements/AuthComponents/FormSignUp.vue')['default']
     Header: typeof import('./../components/Elements/Header.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

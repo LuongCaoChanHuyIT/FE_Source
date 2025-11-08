@@ -1,14 +1,3 @@
 <template>
-  <div class="">
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ádfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-  </div>
+  <div class="">Home page</div>
 </template>

@@ -1,7 +1,41 @@
 <template>
-  <div>
-    <h2 class="text-2xl font-bold mb-4 text-center">Đăng nhập</h2>
-    <input class="border p-2 w-full mb-4" placeholder="Tên đăng nhập" />
-    <button class="bg-blue-600 text-white w-full py-2 rounded">Login</button>
+  <div class="flex justify-center items-center p-24">
+    <div class="bg-white w-2xl h-50">
+      <div class="p-6 flex justify-center items-center">
+        <div
+          class="text-2xl font-bold cursor-pointer"
+          :class="toggleForm === 'SignUp' ? 'opacity-25' : ''"
+          @click="handleToggleForm('SignIn')"
+        >
+          Đăng nhập
+        </div>
+        <div class="h-8 border border-b-gray-400 opacity-25 mx-8"></div>
+        <div
+          class="text-2xl font-bold cursor-pointer"
+          :class="toggleForm === 'SignIn' ? 'opacity-25' : ''"
+          @click="handleToggleForm('SignUp')"
+        >
+          Đăng ký
+        </div>
+      </div>
+      <div class="">
+        <component :is="returnForm" />
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import FormSignIn from '@/components/Elements/AuthComponents/FormSignIn.vue'
+import FormSignUp from '@/components/Elements/AuthComponents/FormSignUp.vue'
+
+const toggleForm = ref<'SignIn' | 'SignUp'>('SignIn')
+
+const handleToggleForm = (type: 'SignIn' | 'SignUp') => {
+  toggleForm.value = type
+}
+
+const returnForm = computed(() => {
+  return toggleForm.value === 'SignIn' ? FormSignIn : FormSignUp
+})
+</script>

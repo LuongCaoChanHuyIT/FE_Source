@@ -12,7 +12,10 @@
         </BaseInput>
       </div>
       <div class="flex items-center space-x-6">
-        <div class="flex items-center space-x-2 cursor-pointer hover:opacity-75">
+        <div
+          class="flex items-center space-x-2 cursor-pointer hover:opacity-75"
+          @click="nextPageLogin"
+        >
           <div class="w-px h-10 bg-gray-300 opacity-25"></div>
           <i class="fa-regular fa-user text-xl"></i>
           <div class="text-sm">
@@ -37,7 +40,15 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
 import BaseInput from '@/components/UI/Inputs/BaseInput.vue'
 import BaseButton from '@/components/UI/Buttons/BaseButton.vue'
+
+const router = useRouter()
+
 const search = ref<string>('')
+
+const nextPageLogin = () => {
+  router.push('/auth')
+}
 </script>
