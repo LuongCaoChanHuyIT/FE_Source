@@ -1,5 +1,10 @@
 <template>
-  <button :class="buttonClasses" :disabled="disabled" @click="$emit('click')">
+  <button
+    :class="buttonClasses"
+    class="cursor-pointer"
+    :disabled="disabled"
+    @click="$emit('click')"
+  >
     <slot />
   </button>
 </template>
@@ -26,7 +31,7 @@ const buttonClasses = computed(() => {
     'inline-flex items-center justify-center font-medium focus:outline-none transition-all duration-200'
 
   const variants: Record<string, string> = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white',
+    primary: 'bg-(--color-vibrant-orange) hover:opacity-75 text-white',
     secondary: 'bg-gray-600 hover:bg-gray-700 text-white',
     outline: 'border border-gray-400 text-gray-700 hover:bg-gray-100',
     danger: 'bg-red-600 hover:bg-red-700 text-white',
@@ -39,7 +44,7 @@ const buttonClasses = computed(() => {
     lg: 'px-6 py-3 text-lg',
   }
 
-  const round = props.rounded ? 'rounded-full' : 'rounded-lg'
+  const round = props.rounded ? 'rounded-full' : 'rounded-sm'
   const disabledClass = props.disabled ? 'opacity-60 cursor-not-allowed' : ''
 
   return [base, variants[props.variant], sizes[props.size], round, disabledClass].join(' ')

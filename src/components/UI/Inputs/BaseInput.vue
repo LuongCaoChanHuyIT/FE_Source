@@ -6,15 +6,15 @@
     </label>
 
     <div
-      class="relative flex items-center"
+      class="relative flex items-center bg-white"
       :class="[
         error
           ? 'border-(--color-red)'
           : 'border-(--color-very-light-muted-blue) focus-within:border-(--color-vibrant-orange)',
-        'border rounded-lg transition duration-150',
+        'border rounded-sm transition duration-150',
       ]"
     >
-      <span v-if="$slots.prefix" class="pl-3 opacity-75">
+      <span v-if="$slots.prefix" class="p-1 opacity-75">
         <slot name="prefix" />
       </span>
 
@@ -22,12 +22,12 @@
         :is="isTextarea ? 'textarea' : 'input'"
         :value="modelValue"
         v-bind="inputAttrs"
-        class="w-full px-3 py-2 text-sm text-gray-900 placeholder-(--color-very-light-muted-blue) bg-transparent focus:outline-none"
+        class="w-full px-3 py-2 text-sm text-gray-900 placeholder-gray-700 bg-transparent focus:outline-none"
         :rows="isTextarea ? rows : undefined"
         @input="onInput"
       />
 
-      <span v-if="$slots.suffix" class="pr-3 opacity-75">
+      <span v-if="$slots.suffix" class="p-1 opacity-75">
         <slot name="suffix" />
       </span>
     </div>

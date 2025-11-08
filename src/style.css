@@ -1,10 +1,10 @@
 @import 'tailwindcss';
-/* @import '@fortawesome/fontawesome-free/css/all.css'; */
-@import 'tailwindcss';
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import '@fontsource/quicksand/index.css';
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --color-dark-blue: #2c3848;
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-dark-blue: #263342;
   --color-vibrant-orange: #f4b400;
   --color-very-light-muted-blue: #d1d5db;
   --color-red: #dc2626;
