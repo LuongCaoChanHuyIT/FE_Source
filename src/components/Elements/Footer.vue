@@ -1,8 +1,6 @@
 <template>
   <footer class="mt-10">
-    <!-- Phần đăng ký nhận bản tin -->
-    <div class="bg-sky-500 text-white py-6">
-      <!-- Giới hạn chiều rộng -->
+    <div class="bg-sky-500 text-white p-4">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 space-y-3 md:space-y-0"
       >
@@ -24,10 +22,8 @@
       </p>
     </div>
 
-    <!-- Nội dung footer -->
     <div class="bg-white py-10 border-t">
       <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-8 px-6 text-gray-700">
-        <!-- Cột 1: Về Techgo -->
         <div class="col-span-2">
           <h3 class="font-semibold text-lg mb-3">Về Techgo</h3>
           <p class="text-sm leading-relaxed mb-4">
@@ -53,7 +49,6 @@
           </div>
         </div>
 
-        <!-- Cột 2: Thông tin liên hệ -->
         <div>
           <h3 class="font-semibold text-lg mb-3">Thông tin liên hệ</h3>
           <ul class="space-y-2 text-sm">
@@ -73,7 +68,6 @@
           </ul>
         </div>
 
-        <!-- Cột 3: Hỗ trợ khách hàng -->
         <div>
           <h3 class="font-semibold text-lg mb-3">Hỗ trợ khách hàng</h3>
           <ul class="space-y-2 text-sm">
@@ -86,7 +80,6 @@
           </ul>
         </div>
 
-        <!-- Cột 4: Liên kết -->
         <div>
           <h3 class="font-semibold text-lg mb-3">Liên kết</h3>
           <ul class="space-y-2 text-sm">
@@ -96,7 +89,6 @@
           </ul>
         </div>
 
-        <!-- Cột 5: Chính sách -->
         <div>
           <h3 class="font-semibold text-lg mb-3">Chính sách</h3>
           <ul class="space-y-2 text-sm">
@@ -107,7 +99,6 @@
         </div>
       </div>
 
-      <!-- Dòng bản quyền -->
       <div class="border-t mt-8 pt-4 text-center text-sm text-gray-600">
         Copyright © 2025 <span class="font-semibold">TechGO</span>. Powered by Haravan
       </div>
@@ -115,10 +106,6 @@
   </footer>
 </template>
 
-<script setup>
-// Không cần logic JS cho footer tĩnh
-</script>
+<script setup></script>
 
-<style scoped>
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-</style>
+<style scoped></style>

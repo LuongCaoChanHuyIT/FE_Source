@@ -6,12 +6,13 @@
     </label>
 
     <div
-      class="relative flex items-center bg-white"
+      class="relative flex items-center"
       :class="[
         error
           ? 'border-(--color-red)'
           : 'border-(--color-very-light-muted-blue) focus-within:border-(--color-vibrant-orange)',
         'border rounded-sm transition duration-150',
+        background,
       ]"
     >
       <span v-if="$slots.prefix" class="p-1 opacity-75">
@@ -22,7 +23,10 @@
         :is="isTextarea ? 'textarea' : 'input'"
         :value="modelValue"
         v-bind="inputAttrs"
-        class="w-full px-3 py-2 text-sm text-gray-900 placeholder-gray-700 bg-transparent focus:outline-none"
+        :class="[
+          'w-full px-3 py-2 text-gray-900 placeholder-gray-700 bg-transparent focus:outline-none',
+          customClass,
+        ]"
         :rows="isTextarea ? rows : undefined"
         @input="onInput"
       />
@@ -51,6 +55,8 @@ interface Props {
   error?: string
   id?: string
   rows?: number
+  customClass?: string
+  background?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -60,6 +66,7 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   error: '',
   rows: 3,
+  background: 'bg-white',
 })
 
 const emit = defineEmits(['update:modelValue'])

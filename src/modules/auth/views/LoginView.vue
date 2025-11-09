@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center items-center p-24">
-    <div class="bg-white w-2xl h-50">
+    <div class="bg-white w-xl">
       <div class="p-6 flex justify-center items-center">
         <div
           class="text-2xl font-bold cursor-pointer"
@@ -18,7 +18,7 @@
           Đăng ký
         </div>
       </div>
-      <div class="">
+      <div class="flex justify-center">
         <component :is="returnForm" />
       </div>
     </div>
