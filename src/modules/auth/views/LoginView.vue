@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center items-center p-24">
-    <div class="bg-white w-xl">
+  <div class="flex justify-center items-center p-20">
+    <div class="bg-white w-xl rounded-sm">
       <div class="p-6 flex justify-center items-center">
         <div
           class="text-2xl font-bold cursor-pointer"

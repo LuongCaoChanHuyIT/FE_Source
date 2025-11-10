@@ -7,13 +7,17 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue').EffectScope
+  const FieldContextKey: typeof import('vee-validate').FieldContextKey
+  const FormContextKey: typeof import('vee-validate').FormContextKey
   const acceptHMRUpdate: typeof import('pinia').acceptHMRUpdate
   const computed: typeof import('vue').computed
+  const configure: typeof import('vee-validate').configure
   const createApp: typeof import('vue').createApp
   const createPinia: typeof import('pinia').createPinia
   const customRef: typeof import('vue').customRef
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
+  const defineRule: typeof import('vee-validate').defineRule
   const defineStore: typeof import('pinia').defineStore
   const effectScope: typeof import('vue').effectScope
   const getActivePinia: typeof import('pinia').getActivePinia
@@ -70,13 +74,33 @@ declare global {
   const useAttrs: typeof import('vue').useAttrs
   const useCssModule: typeof import('vue').useCssModule
   const useCssVars: typeof import('vue').useCssVars
+  const useField: typeof import('vee-validate').useField
+  const useFieldArray: typeof import('vee-validate').useFieldArray
+  const useFieldError: typeof import('vee-validate').useFieldError
+  const useFieldValue: typeof import('vee-validate').useFieldValue
+  const useForm: typeof import('vee-validate').useForm
+  const useFormErrors: typeof import('vee-validate').useFormErrors
+  const useFormValues: typeof import('vee-validate').useFormValues
   const useId: typeof import('vue').useId
+  const useIsFieldDirty: typeof import('vee-validate').useIsFieldDirty
+  const useIsFieldTouched: typeof import('vee-validate').useIsFieldTouched
+  const useIsFieldValid: typeof import('vee-validate').useIsFieldValid
+  const useIsFormDirty: typeof import('vee-validate').useIsFormDirty
+  const useIsFormTouched: typeof import('vee-validate').useIsFormTouched
+  const useIsFormValid: typeof import('vee-validate').useIsFormValid
+  const useIsSubmitting: typeof import('vee-validate').useIsSubmitting
   const useLink: typeof import('vue-router').useLink
   const useModel: typeof import('vue').useModel
+  const useResetForm: typeof import('vee-validate').useResetForm
   const useRoute: typeof import('vue-router').useRoute
   const useRouter: typeof import('vue-router').useRouter
   const useSlots: typeof import('vue').useSlots
+  const useSubmitCount: typeof import('vee-validate').useSubmitCount
+  const useSubmitForm: typeof import('vee-validate').useSubmitForm
   const useTemplateRef: typeof import('vue').useTemplateRef
+  const useValidateField: typeof import('vee-validate').useValidateField
+  const useValidateForm: typeof import('vee-validate').useValidateForm
+  const validate: typeof import('vee-validate').validate
   const watch: typeof import('vue').watch
   const watchEffect: typeof import('vue').watchEffect
   const watchPostEffect: typeof import('vue').watchPostEffect

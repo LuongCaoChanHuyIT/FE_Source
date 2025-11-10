@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     tailwindcss(),
     AutoImport({
-      imports: ['vue', 'vue-router', 'pinia'],
+      imports: ['vue', 'vue-router', 'pinia', 'vee-validate'],
       dts: 'src/types/auto-imports.d.ts',
     }),
     Components({

@@ -28,6 +28,7 @@
           customClass,
         ]"
         :rows="isTextarea ? rows : undefined"
+        :autocomplete="autocomplete"
         @input="onInput"
       />
 
@@ -57,6 +58,7 @@ interface Props {
   rows?: number
   customClass?: string
   background?: string
+  autocomplete?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -85,3 +87,20 @@ function onInput(e: Event) {
   emit('update:modelValue', target.value)
 }
 </script>
+<style scoped>
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #eee inset !important;
+  box-shadow: 0 0 0px 1000px #eee inset !important;
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:valid,
+input:invalid {
+  box-shadow: none !important;
+  outline: none !important;
+}
+</style>
