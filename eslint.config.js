@@ -24,7 +24,35 @@ export default [
         sourceType: 'module',
         extraFileExtensions: ['.vue'],
       },
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+
+        // Vue auto-import
+        ref: 'readonly',
+        reactive: 'readonly',
+        computed: 'readonly',
+        watch: 'readonly',
+        watchEffect: 'readonly',
+        onMounted: 'readonly',
+        onUnmounted: 'readonly',
+        onBeforeMount: 'readonly',
+        onBeforeUnmount: 'readonly',
+        nextTick: 'readonly',
+
+        // Vue <script setup>
+        defineProps: 'readonly',
+        defineEmits: 'readonly',
+        defineExpose: 'readonly',
+        withDefaults: 'readonly',
+
+        // Vue Router
+        useRouter: 'readonly',
+        useRoute: 'readonly',
+
+        // Pinia
+        defineStore: 'readonly',
+        storeToRefs: 'readonly',
+      },
     },
     plugins: {
       prettier,

@@ -1,7 +1,7 @@
 <template>
   <header class="bg-(--color-dark-blue) text-white">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-      <div class="text-2xl font-bold tracking-wide">TECHGO</div>
+      <div class="text-2xl font-bold tracking-wide">LOGO</div>
       <div class="flex items-center w-1/2">
         <BaseInput class="w-full" :model-value="search" placeholder="Tìm kiếm sản phẩm...">
           <template #suffix>

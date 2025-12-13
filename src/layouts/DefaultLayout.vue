@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Header from '@/components/Elements/Header.vue'
-import Footer from '@/components/Elements/Footer.vue'
 </script>
 
 <template>
@@ -11,6 +10,5 @@ import Footer from '@/components/Elements/Footer.vue'
         <router-view />
       </div>
     </main>
-    <!-- <Footer></Footer> -->
   </div>
 </template>
